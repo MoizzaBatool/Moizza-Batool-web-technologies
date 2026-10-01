@@ -1,0 +1,136 @@
+@page {
+  size: A4;
+  margin: 15mm 17mm;
+}
+
+body {
+  margin: 0;
+  padding: 28px 12px;
+  background-color: #c9c9c9;
+  color: #111;
+  font-family: Cambria, "Times New Roman", Times, serif;
+  font-size: 10.5pt;
+  line-height: 1.32;
+}
+
+.sheet {
+  box-sizing: border-box;
+  width: 210mm;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15mm 17mm;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+h1 {
+  margin: 0 0 3px;
+  text-align: center;
+  font-size: 21pt;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1c2b4a;
+}
+
+.contact {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 10pt;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  margin: 13px 0 5px;
+  padding-bottom: 1px;
+  border-bottom: 0.75pt solid #1c2b4a;
+  font-size: 10.5pt;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1c2b4a;
+}
+
+p {
+  margin: 2px 0;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.entry {
+  margin-bottom: 7px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.row span:last-child {
+  flex-shrink: 0;
+}
+
+ul {
+  margin: 2px 0 0;
+  padding-left: 17px;
+}
+
+li {
+  margin-bottom: 1.5px;
+  padding-left: 2px;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .sheet {
+    padding: 22px 18px;
+    border: none;
+  }
+
+  h1 {
+    font-size: 17pt;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 0 12px;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: none;
+  }
+
+  .sheet {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .entry {
+    break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
